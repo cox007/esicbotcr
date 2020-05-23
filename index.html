@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>BO THRISSUR</title>
+</head>
+<title>Staff Login</title>
+    <link rel="stylesheet" type="text/css" href="global.css">
+<body>
+    <div class="loginbox" id="frm">
+      <img src="avatar.png" class="avatar">
+      <h0>BO THRISSUR</h0>
+      <h1>Login Here</h1>
+      <form action = "authentication.php" onsubmit = "return validation()" method = "POST">
+        <p>Username</p>
+        <input type="text" name="user" id="username" placeholder="Enter Username">
+        <p>Password</p>
+        <input type="password" name="pass" id="pass" placeholder="Enter Password">
+        <input type="submit" id="btn" value="Login">
+      </form>
+    </div>
+    <script>
+            function validation()
+            {
+                var id=document.f1.user.value;
+                var ps=document.f1.pass.value;
+                if(id.length=="" && ps.length=="") {
+                    alert("User Name and Password fields are empty");
+                    return false;
+                }
+                else
+                {
+                    if(id.length=="") {
+                        alert("User Name is empty");
+                        return false;
+                    }
+                    if (ps.length=="") {
+                    alert("Password field is empty");
+                    return false;
+                    }
+                }
+            }
+    </script>
+</body>
+</html>
